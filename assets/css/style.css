@@ -1,0 +1,224 @@
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@600,400&display=swap');
+
+:root {
+    --header-height: 3.5rem;
+    /************** Colors *****************/
+    --first-color: #08A045;
+    --first-color-alt: #008e39;
+    --first-color-light: #48bb69;
+    --title-color: #f9fafa;
+    --text-color: #acafb9;
+    --white-color: #f9fafa;
+    --black-color: #0a0a0b;
+    --body-color: #131416;
+    --gradient-card: linear-gradient(180deg,#141613,#008e39);
+
+    /************** Fonts *****************/
+    --body-font: "General Sans", sans-serif;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --font-regular: 400;
+    --font-bold: 600;
+}
+*{
+    font-family: var(--body-font);
+}
+body{
+    height: auto;
+    background-color: var(--body-color);
+    margin: 0;
+}
+
+/************ Buttons****************/
+button{
+    text-align: center;
+    letter-spacing: .00656rem;
+    border-radius: 0.25rem;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem 1.25rem;
+    font-size: .875rem;
+    font-weight: 400;
+    transition: background-color .2s;
+    text-decoration: none; 
+    background-color: var(--first-color);
+    border: none;
+    color: var(--white-color);
+    cursor: pointer;
+}
+/************ Buttons****************/
+
+
+/*********nav bar******/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 100
+}
+
+.navbar{
+    padding:1.25rem 7.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+}
+
+.nav-logo{
+    color: var(--white-color);
+    font-family: var(--body-font);
+    font-weight: var(--font-bold);
+    font-size: var(--h1-font-size);
+    text-decoration: none;
+}
+
+.nav-menu{
+    margin: 0.5rem 0 0 0.5rem;
+    width: 50%;
+}
+
+.nav-list{
+    display: flex;
+}
+
+.nav-items{
+    list-style: none;
+}
+.nav-list .nav-items .nav-links{
+    margin-top: 1rem;
+    padding: 0 1rem;
+    color: var(--white-color);
+    font-family: var(--body-font);
+    font-weight: var(--font-regular);
+    font-size: var(--h3-font-size);
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.nav-list .nav-items .nav-links:hover{
+    color: var(--first-color);
+}
+
+.btn-links{
+    text-decoration: none;
+}
+
+#sign-in{
+    color: var(--first-color);
+    border: 1px solid var(--first-color);
+    background-color:transparent;
+}
+
+/* #sign-in:hover{
+    color: var(--white-color);
+    border: 1px solid var(--first-color);
+    background-color:var(--first-color);
+} */
+
+#trail{
+    margin-left: 2px;
+}
+/*********nav bar******/
+
+
+/********** Hero *************/
+.hero-container{
+    width: 100%;
+    padding-top: 4.5rem;
+    row-gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.hero-info{
+    width: 45%;
+    padding-top: 5rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.hero-title{
+    width: 90%;
+    font-family: var(--body-font);
+    font-size: 3.5rem;
+    color: var(--title-color);
+    margin-bottom: 0;
+}
+
+.hero-sub-title{
+    width: 90%;
+    font-family: var(--body-font);
+    font-weight: var(--font-regular);
+    color: var(--title-color);
+    font-size: var(--h1-font-size);
+}
+
+.hero-img-container{
+    padding-top: 9rem;
+    width: 30%;
+    margin-right: 3.5rem;
+    /* margin-left: -1rem; */
+}
+
+.hero-img{
+    width: 110%;
+}
+
+.highlight-text{
+    color: var(--first-color);
+}
+
+/********** Client *************/
+.client-container{
+    margin-top: 12rem;
+    width: 100%;
+    background-color: var(--white-color);
+    padding: 2.5rem 0;
+    row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-title{
+    font-family: var(--body-font);
+    font-size: var(--h2-font-size);
+}
+
+.client-logos{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .logo-name{
+    color: w;
+    text-align: center;
+} */
+
+.blur-header::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:hsla(228, 24%, 6%,0.2) ;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    content: "";
+    z-index: -1;
+}
