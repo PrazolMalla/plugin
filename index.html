@@ -15,25 +15,23 @@
             Khana Khazana
         </a>
         <div class="nav-menu">
+            <div class="nav-cross">
+                <li class="nav-items cross"><i class="fa-solid fa-xmark"></i></li>
+            </div>
             <ul class="nav-list">
                 <li class="nav-items">
                     <a href="#" class="nav-links">Home</a>
                 </li>
                 <li class="nav-items">
-                    <a href="#" class="nav-links">About Us</a>
+                    <a href="#features-section" class="nav-links">Features</a>
                 </li>
                 <li class="nav-items">
-                    <a href="#" class="nav-links">Features</a>
+                    <a href="#tutorial-section" class="nav-links">Tutorials</a>
                 </li>
                 <li class="nav-items">
-                    <a href="#" class="nav-links">Tutorials</a>
+                    <a href="#blog-section" class="nav-links">Blog</a>
                 </li>
-                <li class="nav-items">
-                    <a href="#" class="nav-links">Blog</a>
-                </li>
-                <li class="nav-items">
-                    <a href="#" class="nav-links">Contact Us</a>
-                </li>
+                <!-- <li class="nav-items cross"><i class="fa-solid fa-xmark"></i></li> -->
             </ul>
         </div>
         <div class="nav-actions">
@@ -44,13 +42,16 @@
                 <button id="trail">Get a trail</button>
             </a>
         </div>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars nav-ham"></i>
+        </div>
     </nav>
 </header>
 
 <!-- ******** Main ******** -->
 <main class="main">
         <!-- ******** Hero ******** -->
-        <section class="hero-section">
+        <section id="hero-section">
             <div class="hero-container">
                 <div class="hero-info">
                     <h1 class="hero-title">All of your company's <span class="highlight-text">inventory</span> in one view</h1>
@@ -70,7 +71,7 @@
             </div>            
         </section>
         <!-- ******** Client ******** -->
-        <section class="client-section">
+        <!-- <section class="client-section">
             <div class="client-container">
                 <div class="client-heading">
                     <p class="sub-title">Leading companies use Khana Khazana as their inventory management system</p>
@@ -89,10 +90,120 @@
                         <img src="/assets/images/c4.png" alt="">
                     </div>
                 </div>
-            </div>
+            </div> -->
             
+        <!-- </section> -->
+        <!-- ****** Features ******* -->
+        <section id="features-section">
+            <div class="features-container">
+                <div class="features-heading">
+                    <h1 class="title">Features</h1>
+                    <p class="sub-title">Get access to these <span class="highlight-text">premium features</span> </p>
+                </div>
+                <div class="list-container">
+                    <div class="feature">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <h1 class="feature-title">Scalability</h1>
+                        <p class="feature-desc">Adapt and grow, no matter the demand.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <h1 class="feature-title">Scalability</h1>
+                        <p class="feature-desc">Adapt and grow, no matter the demand.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <h1 class="feature-title">Scalability</h1>
+                        <p class="feature-desc">Adapt and grow, no matter the demand.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <h1 class="feature-title">Scalability</h1>
+                        <p class="feature-desc">Adapt and grow, no matter the demand.</p>
+                    </div>
+                </div>
+        </section>
+        <!-- ****** Tutorial ******* -->
+        <section id="tutorial-section">
+            <div class="container">
+                <div class="heading">
+                    <h1 class="title">Tutorial</h1>
+                    <p class="sub-title">How to use <span class="highlight-text">Khana Khazana</span></p>
+                </div>
+                <div class="video-section">
+                    <div class="video-container">
+                        <iframe class="video" src="https://www.youtube.com/embed/Cx2dkpBxst8" 
+                        title="What&#39;s Figma?" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                        gyroscope; picture-in-picture; web-share"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h1 class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Non, ipsa! </h1>
+                        <button id="sign-in">Try Now <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <hr>
+        </section>
+        
+        <!-- ****** Blog ******* -->
+        <section id="blog-section">
+            <div class="container">
+                <div class="heading">
+                    <h1 class="title">Blog</h1>
+                    <p class="sub-title">What's <span class="highlight-text">New</span></p>
+                </div>
+                <div class="blog-contains">
+                    <div class="blog-container">
+                        <div class="card-img">
+                            <img src="./assets/images/c1.png" alt="">
+                        </div>
+                        <div class="blog-info">
+                            <h1 class="title">7 Things To Know About Web Design</h1>
+                            <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum voluptates, illum, dolore 
+                                harum dicta voluptate iure quisquam nesciunt iusto neque ex! 
+                                Dignissimos impedit exercitationem eaque est repellendus voluptates amet veritatis.
+                            </p>
+                            <p class="sub-title">Author : <span class="highlight-text">Admin</span></p>
+                            <button id="trail">Read More</button>
+                        </div>
+                    </div>
+                    <div class="blog-container">
+                        <div class="card-img">
+                            <img src="./assets/images/c1.png" alt="">
+                        </div>
+                        <div class="blog-info">
+                            <h1 class="title">7 Things To Know About Web Design</h1>
+                            <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum voluptates, illum, dolore 
+                                harum dicta voluptate iure quisquam nesciunt iusto neque ex! 
+                                Dignissimos impedit exercitationem eaque est repellendus voluptates amet veritatis.
+                            </p>
+                            <p class="sub-title">Author : <span class="highlight-text">Admin</span></p>
+                            <button id="trail">Read More</button>
+                        </div>
+                    </div>
+                    <div class="blog-container">
+                        <div class="card-img">
+                            <img src="./assets/images/c1.png" alt="">
+                        </div>
+                        <div class="blog-info">
+                            <h1 class="title">7 Things To Know About Web Design</h1>
+                            <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum voluptates, illum, dolore 
+                                harum dicta voluptate iure quisquam nesciunt iusto neque ex! 
+                                Dignissimos impedit exercitationem eaque est repellendus voluptates amet veritatis.
+                            </p>
+                            <p class="sub-title">Author : <span class="highlight-text">Admin</span></p>
+                            <button id="trail">Read More</button>
+                        </div>
+                    </div>
+                    
+                    
+                </div>      
         </section>
     </main>
+    <footer class="footer">
+
+    </footer>
     <script src="/assets/js/script.js"></script>
 </body>
 </html>

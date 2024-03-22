@@ -25,7 +25,9 @@
     --font-bold: 600;
 }
 *{
+    color: var(--white-color);
     font-family: var(--body-font);
+    scroll-behavior: smooth;
 }
 body{
     height: auto;
@@ -65,9 +67,9 @@ button{
 }
 
 .navbar{
-    padding:1.25rem 7.5rem;
+    padding:1.25rem 11rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     
 
@@ -83,7 +85,7 @@ button{
 
 .nav-menu{
     margin: 0.5rem 0 0 0.5rem;
-    width: 50%;
+
 }
 
 .nav-list{
@@ -127,13 +129,94 @@ button{
 #trail{
     margin-left: 2px;
 }
-/*********nav bar******/
+
+.blur-header::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:hsla(228, 24%, 6%,0.2) ;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    content: "";
+    z-index: -1;
+   
+}
+
+.nav-cross{
+    display: none;
+}
+
+.hamburger-menu{
+    display: none;
+}
+/******** small laptop **********/
+@media screen and (max-width: 1024px) {
+    .navbar{
+        display: flex;
+        row-gap: 5rem;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+    .nav-menu{
+        /* margin-top: 3rem; */
+        position: fixed;
+        top: -10px;
+        right: -1000px;
+        width: 20%;
+        height: 100%;
+        padding: 6rem 3rem 0; 
+        transition: right 0.4s;
+        /* display: none; */
+        background-color: hsla(228, 24%, 6%,0.8) ;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+    }
+
+    .nav-list{
+        display: flex;
+        row-gap: 3rem;
+        flex-direction: column;
+
+    }
+    .nav-cross{
+        display: inline-block;
+        position: relative;
+        top: -50px;
+        left: 150px;
+        font-size: var(--h1-font-size);
+    }
+
+    .hamburger-menu{
+        display: block;
+    }
+
+    .hamburger-menu i{
+        font-size: var(--h1-font-size);
+    }
+}
+/********** Tablet *************/
+
+@media screen and (max-width: 1024px) {
+    .navbar{
+        padding-left: 6rem;
+        padding-right: 6rem;
+        display: flex;
+        row-gap: 5rem;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+}
 
 
 /********** Hero *************/
 .hero-container{
     width: 100%;
-    padding-top: 4.5rem;
+    padding: 4.5rem 0rem;
     row-gap: 2rem;
     display: flex;
     flex-direction: row;
@@ -143,7 +226,6 @@ button{
 .hero-info{
     width: 45%;
     padding-top: 5rem;
-    padding-left: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -169,21 +251,67 @@ button{
 .hero-img-container{
     padding-top: 9rem;
     width: 30%;
-    margin-right: 3.5rem;
-    /* margin-left: -1rem; */
+    margin-right: 1.5rem;
+
 }
 
 .hero-img{
     width: 110%;
+    margin-left: -1.5rem;
 }
 
 .highlight-text{
     color: var(--first-color);
 }
 
+.fa-arrow-right{
+    color: var(--first-color);
+}
+
+/**** Small Laptop *****/
+@media screen and (max-width: 1024px){
+    .hero-container{
+        padding: 4.5rem 0rem;
+    }
+    .hero-title{
+        font-size: 2rem;
+    }
+
+    .hero-sub-title{
+        font-size: var(--normal-font-size)
+    }
+    .hero-info{
+        padding-left: 7.5rem;
+    }
+    .hero-img{
+        width: 100%;
+        margin-left: -4.5rem;
+    }
+}
+
+/**** Tablet *****/
+
+@media screen and (max-width: 768px){
+    .hero-container{
+        padding: 4.5rem 0rem;
+    }
+    .hero-title{
+        font-size: 1.5rem;
+    }
+    .hero-info{
+        padding-left: 2rem;
+    }
+    .hero-img{
+        width: 130%;
+        margin-top: -1rem;
+        margin-left: -4.5rem;
+    }
+}
+
+
 /********** Client *************/
 .client-container{
-    margin-top: 12rem;
+    margin-top: 11rem;
     width: 100%;
     background-color: var(--white-color);
     padding: 2.5rem 0;
@@ -199,26 +327,393 @@ button{
     font-size: var(--h2-font-size);
 }
 
+.client-container .sub-title{
+    color: var(--black-color);
+}
+
 .client-logos{
     width: 75%;
     display: flex;
     justify-content: space-between;
 }
 
-/* .logo-name{
-    color: w;
-    text-align: center;
+
+
+/**** features ****/
+
+.features-container{
+    
+    width: 100%;
+    padding:2.5rem 0 4.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.features-heading{
+    margin-left: 11rem;
+}
+
+.title{
+    color: var(--first-color);
+    margin-top: 2.75rem;
+    font-size: 3rem;
+    margin-bottom: -1rem;
+}
+
+.list-container{
+    width: 75%;
+    margin-top: -1.5rem;
+    margin-left: 11rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 6.5rem;
+}
+
+.feature{
+    width: 25%;
+    margin-top: 2.5rem;
+}
+
+.feature i{
+    font-size: var(--biggest-font-size);
+    background: -webkit-linear-gradient(180deg,#48bb69,#008e39);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0 0.5rem;
+    border-left: 1px solid var(--first-color-light);
+}
+.feature .feature-desc{
+    margin-top: -1rem;
+}
+
+
+/**** Small Laptop *****/
+@media screen and (max-width: 1024px){
+    .title{
+        font-size: 2rem;
+    }
+
+    .sub-title{
+        font-size: var(--normal-font-size);
+    }
+
+    .feature i{
+        font-size: var(--h1-font-size);
+    }
+
+    .list-container{
+        gap:0.5rem;
+    }
+
+    .feature-title{
+        font-size: var(--h2-font-size);
+    }
+    .feature .feature-desc{
+        margin-top:-0.5rem;
+        font-size: var(--normal-font-size);
+    }
+
+    .feature{
+        width: 20%;
+        margin-top: 2.5rem;
+    }
+
+    .list-container{
+        width: 75%;
+        margin-top: -1.5rem;
+        margin-left: 9.5rem;
+    }
+}
+
+/**** Tablet *****/
+@media screen and (max-width: 768px){
+    .title{
+        font-size: 1.5rem;
+    }
+    .list-container{
+        width: 75%;
+        margin-top: -1.5rem;
+        margin-left: 6rem;
+        gap: 2rem;
+    }
+    .sub-title{
+        font-size: var(--normal-font-size);
+    }
+
+    .feature i{
+        font-size: var(--h2-font-size);
+    }
+
+    .feature-title{
+        font-size: var(--h2-font-size);
+    }
+    .feature .feature-desc{
+        font-size: var(--small-font-size);
+    }
+    .feature-title{
+        font-size: var(--h3-font-size);
+    }
+
+    .feature{
+        width: 25%;
+    }
+    .features-heading{
+        margin-left: 6rem;
+    }
+}
+
+/********* Tutorial ***********/
+.container{
+    width: 100%;
+    background-color: var(--white-color);
+    padding:2.5rem 0 4.5rem 0;
+    row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.heading{
+    margin-left: 11rem;
+}
+
+.heading .sub-title{
+    color: var(--body-color);
+}
+
+hr{
+    margin-top: 5rem;
+    margin-bottom: -5rem;
+    
+    width: 80%;
+    border: 1px solid var(--first-color);
+}
+
+
+.video-section{
+    width: 75%;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -1.5rem;
+    margin-left: 11rem;
+}
+
+.video{
+    width:621px;
+    height: 350px;
+}
+
+.video-info{
+    /* margin-top: 1.5rem; */
+    width: 50%;
+}
+
+.video-info .title{
+    color: var(--body-color);
+    font-weight: var(--font-regular);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/**** Small Laptop *****/
+@media screen and (max-width: 1024px){
+    .video-section{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .video{
+        width:670px;
+        height: 380px;
+    }
+
+    .video-info{
+        width: 90%;
+    }
+    .video-info .title{
+        font-size: 1.5rem;
+    }
+
+    hr {
+        width: 70%;
+        margin-top: 2rem;
+        margin-bottom: -7rem;
+        /* margin-bottom: -2rem; */
+    }
+}
+
+/**** Tablet *****/
+@media screen and (max-width: 768px){
+    .video-section{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 6rem;
+        
+    }
+
+    .heading{
+        margin-left: 6rem;
+    }
+    
+
+    .video{
+        width:570px;
+        height: 324px;
+    }
+
+    .video-info{
+        width: 90%;
+    }
+    .video-info .title{
+        font-size: 1rem;
+    }
+
+    hr{
+        width: 80%;
+    }
+}
+
+
+/********* Blog ***********/
+
+.blog-contains{
+    width: 75%;
+    margin-left: 11rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.blog-container{
+    width: 25%;
+    max-height: 470px;
+    border: 2px solid var(--first-color-light);
+    padding: 1.5rem;
+    gap: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+
+/* .card-img{
+    max-height: 100px; 
 } */
 
-.blur-header::after{
-    position: absolute;
-    top: 0;
-    left: 0;
+.card-img img{
     width: 100%;
-    height: 100%;
-    background-color:hsla(228, 24%, 6%,0.2) ;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    content: "";
-    z-index: -1;
+    height: auto;
+    
+}
+
+.blog-info .title{
+    margin-top: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: -webkit-linear-gradient(180deg,#48bb69,#008e39);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.blog-info .sub-title{
+    color: var(--body-color);
+    font-size: var(--normal-font-size);
+    text-align: justify;
+}
+
+/******* Small Laptop *********/
+@media screen and (max-width: 1024px){
+    .blog-contains{
+        gap: 2.5rem;
+        justify-content: flex-start;
+    }
+    .blog-container {
+        width: 20%;
+    }
+    .blog-info .title{
+        font-size: 1.5rem;
+    }
+    .blog-info .sub-title{
+        font-size: var(--small-font-size);
+    }
+}
+
+/******* tablet *********/
+@media screen and (max-width: 768px){
+    .blog-contains{
+        gap: 0.5rem;
+        justify-content: flex-start;
+        margin-left: 6rem;
+    }
+    .blog-container {
+        width: 20%;
+    }
+    .blog-info .title{
+        font-size: 1rem;
+    }
+    .blog-info .sub-title{
+        font-size: 0.6rem;
+    }
+
+    button{
+        text-align: center;
+        letter-spacing: .00656rem;
+        border-radius: 0.25rem;
+        flex: none;
+        justify-content: center;
+        align-items: center;
+        padding: 0.7rem 1.25rem;
+        font-size: .65rem;
+        font-weight: 400;
+        transition: background-color .2s;
+        text-decoration: none; 
+        background-color: var(--first-color);
+        border: none;
+        color: var(--white-color);
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .blog-contains{
+        gap: 0.5rem;
+        justify-content: flex-start;
+        margin-left: 6rem;
+    }
+    .blog-container {
+        width: 20%;
+    }
+    .blog-info .title{
+        font-size: 1rem;
+    }
+    .blog-info .sub-title{
+        font-size: 0.6rem;
+    }
+
+    button{
+        text-align: center;
+        letter-spacing: .00656rem;
+        border-radius: 0.25rem;
+        flex: none;
+        justify-content: center;
+        align-items: center;
+        padding: 0.7rem 1.25rem;
+        font-size: .65rem;
+        font-weight: 400;
+        transition: background-color .2s;
+        text-decoration: none; 
+        background-color: var(--first-color);
+        border: none;
+        color: var(--white-color);
+        cursor: pointer;
+    }
 }
