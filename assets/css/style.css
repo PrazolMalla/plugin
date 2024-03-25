@@ -141,7 +141,7 @@ button{
     -webkit-backdrop-filter: blur(10px);
     content: "";
     z-index: -1;
-   
+
 }
 
 .nav-cross{
@@ -211,6 +211,52 @@ button{
         
     }
 }
+
+@media screen and (max-width: 426px){
+    .navbar{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        display: flex;
+        row-gap: 3rem;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .nav-menu{
+        /* margin-top: 3rem; */
+        position: fixed;
+        top: -10px;
+        right: -1000px;
+        width: 40%;
+        height: 100%;
+        padding: 2rem 1rem 0; 
+        transition: right 0.4s;
+        /* display: none; */
+        background-color: hsla(228, 24%, 6%,0.8) ;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+    }
+    .nav-cross{
+        display: inline-block;
+        position: relative;
+        top: 0px;
+        left: 150px;
+        font-size: var(--h1-font-size);
+    }
+    .nav-actions{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 376px){
+    .nav-menu{
+        width: 50%;
+    }
+}
+
+
+
 
 
 /********** Hero *************/
@@ -307,6 +353,35 @@ button{
         margin-left: -4.5rem;
     }
 }
+
+@media screen and (max-width: 426px) {
+    .hero-container{
+        padding-top: 4.5rem;
+        padding-bottom:  0;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+    .hero-info{
+        padding-left: 3.5rem;
+        width: 90%;
+    }
+
+    .hero-img{
+        width: 260%;
+        margin-top: -7rem;
+        margin-left: -5.5rem;
+    }
+}
+
+@media screen and (max-width: 376px){
+    .hero-img{
+        width: 240%;
+        margin-top: -7rem;
+        margin-left: -4.5rem;
+    }
+}
+
 
 
 /********** Client *************/
@@ -426,6 +501,8 @@ button{
     }
 }
 
+
+
 /**** Tablet *****/
 @media screen and (max-width: 768px){
     .title{
@@ -462,6 +539,23 @@ button{
         margin-left: 6rem;
     }
 }
+/***** Large phone***** */
+@media screen and (max-width: 426px){
+    .list-container{
+        flex-direction: column;
+        margin-left: 3rem;
+        gap: 0.5rem;
+    }
+    .features-heading{
+        margin-left: 3rem;
+    }
+
+    .feature{
+        width: 100%;
+    }
+}
+
+
 
 /********* Tutorial ***********/
 .container{
@@ -580,7 +674,34 @@ hr{
     }
 }
 
+/***** Large phone***** */
+@media screen and (max-width: 426px){
+    .video{
+        width:300px;
+        height: 169px;
+    }
+    .heading{
+        margin-left: 3rem;
+    }
+    .video-section{
+        margin-left: 3rem;
+        
+    }
+}
 
+@media screen and (max-width:370px) {
+    .video{
+        width:250px;
+        height: 169px;
+    }
+}
+
+@media screen and (max-width:321px) {
+    .video{
+        width:250px;
+        height: 140px;
+    }
+}
 /********* Blog ***********/
 
 .blog-contains{
@@ -655,7 +776,7 @@ hr{
         margin-left: 6rem;
     }
     .blog-container {
-        width: 20%;
+        width: 25%;
     }
     .blog-info .title{
         font-size: 1rem;
@@ -683,14 +804,16 @@ hr{
     }
 }
 
-@media screen and (max-width: 425px){
+/******* large mobile ********/
+@media screen and (max-width: 426px){
     .blog-contains{
         gap: 0.5rem;
+        flex-direction: column;
         justify-content: flex-start;
-        margin-left: 6rem;
+        margin-left: 3rem;
     }
     .blog-container {
-        width: 20%;
+        width: 60%;
     }
     .blog-info .title{
         font-size: 1rem;
@@ -717,3 +840,4 @@ hr{
         cursor: pointer;
     }
 }
+
