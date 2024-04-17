@@ -270,8 +270,9 @@ button{
     align-items: center;
 }
 .hero-info{
-    width: 45%;
+    width: 50%;
     padding-top: 5rem;
+    padding-left: 4.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -279,7 +280,7 @@ button{
 }
 
 .hero-title{
-    width: 90%;
+    width: 100%;
     font-family: var(--body-font);
     font-size: 3.5rem;
     color: var(--title-color);
@@ -295,14 +296,13 @@ button{
 }
 
 .hero-img-container{
-    padding-top: 9rem;
     width: 30%;
     margin-right: 1.5rem;
 
 }
 
 .hero-img{
-    width: 110%;
+    width: 100%;
     margin-left: -1.5rem;
 }
 
@@ -327,11 +327,12 @@ button{
         font-size: var(--normal-font-size)
     }
     .hero-info{
-        padding-left: 7.5rem;
+        padding-left: .5rem;
     }
     .hero-img{
+        margin-top: 2rem;
         width: 100%;
-        margin-left: -4.5rem;
+        margin-left: 1rem;
     }
 }
 
@@ -345,18 +346,18 @@ button{
         font-size: 1.5rem;
     }
     .hero-info{
-        padding-left: 2rem;
+        padding-left: 4rem;
     }
     .hero-img{
-        width: 130%;
-        margin-top: -1rem;
-        margin-left: -4.5rem;
+        width: 90%;
+        margin-top: 0rem;
+        margin-left: -1rem;
     }
 }
 
 @media screen and (max-width: 426px) {
     .hero-container{
-        padding-top: 4.5rem;
+        padding-top: .5rem;
         padding-bottom:  0;
         flex-direction: column;
         justify-content: flex-start;
@@ -369,7 +370,7 @@ button{
 
     .hero-img{
         width: 260%;
-        margin-top: -7rem;
+        margin-top: 0rem;
         margin-left: -5.5rem;
     }
 }
@@ -377,8 +378,8 @@ button{
 @media screen and (max-width: 376px){
     .hero-img{
         width: 240%;
-        margin-top: -7rem;
-        margin-left: -4.5rem;
+        margin-top: 0rem;
+        margin-left: -3.5rem;
     }
 }
 
@@ -458,6 +459,13 @@ button{
     padding: 0 0.5rem;
     border-left: 1px solid var(--first-color-light);
 }
+
+.icon{
+    width: 46px;
+    padding: 0 0.5rem;
+    border-left: 2px solid var(--first-color);
+}
+
 .feature .feature-desc{
     margin-top: -1rem;
 }
@@ -465,10 +473,17 @@ button{
 
 /**** Small Laptop *****/
 @media screen and (max-width: 1024px){
+    /* .features-container{
+        padding-left: 1rem;
+    } */
     .title{
         font-size: 2rem;
     }
 
+    .features-heading{
+        margin-left: 6.25rem;
+    }
+    
     .sub-title{
         font-size: var(--normal-font-size);
     }
@@ -495,9 +510,9 @@ button{
     }
 
     .list-container{
-        width: 75%;
+        width: 90%;
         margin-top: -1.5rem;
-        margin-left: 9.5rem;
+        margin-left: 4.75rem;
     }
 }
 
@@ -635,7 +650,7 @@ hr{
     }
 
     hr {
-        width: 70%;
+        width: 85%;
         margin-top: 2rem;
         margin-bottom: -7rem;
         /* margin-bottom: -2rem; */
@@ -922,7 +937,21 @@ hr{
     text-decoration: none;
 }
 
+/* ****small laptop***** */
+@media screen and (max-width: 1024px){
+    .lower-footer{
+        margin-left: 6rem;
+        margin-top: 7rem;
+        margin-right: 7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 /******* tablet *********/
+
+
 @media screen and (max-width: 768px){
     .upper-footer{
         margin-left: 6rem;
